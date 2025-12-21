@@ -97,7 +97,7 @@ const AccountPage = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-0">
       <div className="shrink-0">
         <Sidebar />
       </div>

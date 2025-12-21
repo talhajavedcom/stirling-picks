@@ -13,7 +13,7 @@ import TermsAndConditions from "@/components/TermsAndConditions";
 const Home = ({ className }) => {
   return (
     <>
-      <div className="flex gap-4">
+      <div className="flex gap-0">
         <div className="shrink-0">
           <Sidebar className="min-h-[500px] sm:min-h-[550px] md:min-h-[600px]" />
         </div>
