@@ -4,6 +4,8 @@ import { useState } from "react";
 import { SharedButton } from "@/shared/Button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, X, Zap, Crown, Trophy, Star } from "lucide-react";
+import Header from "@/theme/header/Header";
+import Sidebar from "@/theme/sidebar/Sidebar";
 
 const professionalPlans = [
   {
@@ -95,15 +97,21 @@ const AccountPage = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   return (
-    <div className="min-h-screen bg-sp-black p-4 sm:p-6 lg:p-8">
-      <div className="mb-6 sm:mb-8">
-        <h1 className="text-lg sm:text-xl font-bold text-white font-orbitron inline-block">
-          Account Type
-        </h1>
-        <div className="w-20 sm:w-24 h-1 bg-sp-btn-primary mt-2" />
+    <div className="flex gap-4">
+      <div className="shrink-0">
+        <Sidebar />
       </div>
+      <div className="flex-1 flex flex-col gap-4">
+        <Header />
+        <div className="min-h-screen bg-sp-black p-4 sm:p-6 lg:p-8">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-lg sm:text-xl font-bold text-white font-orbitron inline-block">
+              Account Type
+            </h1>
+            <div className="w-20 sm:w-24 h-1 bg-sp-btn-primary mt-2" />
+          </div>
 
-      <Tabs defaultValue="standard" className="w-full">
+          <Tabs defaultValue="standard" className="w-full">
         <div className="flex justify-center mb-8 sm:mb-12">
           <TabsList className="border border-sp-green-light">
             <TabsTrigger value="standard">Standard</TabsTrigger>
@@ -373,6 +381,8 @@ const AccountPage = () => {
           </div>
         </TabsContent>
       </Tabs>
+        </div>
+      </div>
     </div>
   );
 };

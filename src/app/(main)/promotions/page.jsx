@@ -1,5 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Header from "@/theme/header/Header";
+import Sidebar from "@/theme/sidebar/Sidebar";
 import newCustomerImg from "@/assets/promotions/new-customer.png";
 import gameTicketsImg from "@/assets/promotions/game-tickets.png";
 import dailyRewardsImg from "@/assets/promotions/daily-rewards.png";
@@ -8,15 +12,21 @@ import doubleChancesImg from "@/assets/promotions/double-chances.png";
 
 const PromotionsPage = () => {
   return (
-    <div className="bg-[#0a0a0a] min-h-screen">
-      <div className="flex items-center justify-between px-4 sm:px-8 py-5 border-b border-white/10">
-        <h1 className="text-white text-xl sm:text-2xl font-semibold underline decoration-[#00ff87] decoration-[3px] underline-offset-[6px]">
-          Promotions
-        </h1>
-        <span className="text-white/40 text-sm">Fractional</span>
+    <div className="flex gap-4">
+      <div className="shrink-0">
+        <Sidebar />
       </div>
+      <div className="flex-1 flex flex-col gap-4">
+        <Header />
+        <div className="bg-[#0a0a0a] min-h-screen">
+          <div className="flex items-center justify-between px-4 sm:px-8 py-5 border-b border-white/10">
+            <h1 className="text-white text-xl sm:text-2xl font-semibold underline decoration-[#00ff87] decoration-[3px] underline-offset-[6px]">
+              Promotions
+            </h1>
+            <span className="text-white/40 text-sm">Fractional</span>
+          </div>
 
-      <div className="max-w-[1400px] mx-auto p-6 sm:p-8">
+          <div className="max-w-[1400px] mx-auto p-6 sm:p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           <div className="relative rounded-3xl overflow-hidden h-[220px] bg-[#1a3a2e] border border-[#00ff87]/20 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,255,135,0.2)]">
             <div className="absolute inset-y-0 left-0 w-[55%] z-10 p-7 flex flex-col justify-between">
@@ -176,6 +186,8 @@ const PromotionsPage = () => {
               className="absolute inset-y-0 right-0 w-[55%] bg-cover bg-right"
               style={{ backgroundImage: `url(${doubleChancesImg})` }}
             />
+          </div>
+        </div>
           </div>
         </div>
       </div>

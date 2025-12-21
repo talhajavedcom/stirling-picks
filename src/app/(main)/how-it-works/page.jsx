@@ -1,6 +1,8 @@
 "use client";
 
 import { SharedButton } from "@/shared/Button";
+import Header from "@/theme/header/Header";
+import Sidebar from "@/theme/sidebar/Sidebar";
 
 const accountTypes = [
   {
@@ -19,15 +21,21 @@ const accountTypes = [
 
 const HowItWorksPage = () => {
   return (
-    <div className="min-h-screen bg-black p-4 sm:p-6 lg:p-8">
-      <div className="mb-6 sm:mb-8">
-        <h1 className="text-lg sm:text-xl font-bold text-white font-orbitron inline-block">
-          How It Works
-        </h1>
-        <div className="w-20 sm:w-24 h-1 bg-sp-btn-primary mt-2" />
+    <div className="flex gap-4">
+      <div className="shrink-0">
+        <Sidebar />
       </div>
+      <div className="flex-1 flex flex-col gap-4">
+        <Header />
+        <div className="min-h-screen bg-black p-4 sm:p-6 lg:p-8">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-lg sm:text-xl font-bold text-white font-orbitron inline-block">
+              How It Works
+            </h1>
+            <div className="w-20 sm:w-24 h-1 bg-sp-btn-primary mt-2" />
+          </div>
 
-      <div className="space-y-4 sm:space-y-6 w-full">
+          <div className="space-y-4 sm:space-y-6 w-full">
         {accountTypes.map((account) => (
           <div
             key={account.title}
@@ -49,6 +57,8 @@ const HowItWorksPage = () => {
             </div>
           </div>
         ))}
+          </div>
+        </div>
       </div>
     </div>
   );
