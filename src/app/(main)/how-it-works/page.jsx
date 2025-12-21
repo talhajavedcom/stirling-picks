@@ -36,27 +36,27 @@ const HowItWorksPage = () => {
           </div>
 
           <div className="space-y-4 sm:space-y-6 w-full">
-        {accountTypes.map((account) => (
-          <div
-            key={account.title}
-            className="bg-sp-black rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 w-full"
-          >
-            <div className="flex flex-col items-center text-center w-full max-w-2xl mx-auto">
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                {account.title}
-              </h2>
-              <span className="text-sp-btn-primary font-bold text-xs sm:text-sm mb-4 sm:mb-6">
-                {account.multiplier}
-              </span>
-              <p className="text-white/80 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed px-2 sm:px-4">
-                {account.description}
-              </p>
-              <SharedButton variant="primary" className="px-6 sm:px-8">
-                View Now
-              </SharedButton>
-            </div>
-          </div>
-        ))}
+            {accountTypes.map((account) => (
+              <div
+                key={account.title}
+                className="bg-sp-black rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 w-full"
+              >
+                <div className="flex flex-col items-center text-center w-full max-w-2xl mx-auto">
+                  <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                    {account.title}
+                  </h2>
+                  <span className="text-sp-btn-primary font-bold text-xs sm:text-sm mb-4 sm:mb-6">
+                    {account.multiplier}
+                  </span>
+                  <p className="text-white/80 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed px-2 sm:px-4">
+                    {account.description}
+                  </p>
+                  <SharedButton variant="primary" className="px-6 sm:px-8">
+                    View Now
+                  </SharedButton>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
