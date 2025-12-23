@@ -3,17 +3,17 @@ import { ChevronDown } from "lucide-react";
 
 const TermsAndConditions = ({ className }) => {
   return (
-    <section className={cn("bg-black mb-4 p-4 text-white", className)}>
+    <section className={cn("bg-black mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 md:p-4 text-white rounded-md sm:rounded-lg", className)}>
       <details className="group">
-        <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium">
-          <span className="font-bold uppercase text-2xl text-sp-green">
+        <summary className="flex items-center justify-between p-2 sm:p-3 md:p-4 cursor-pointer text-white font-medium gap-2">
+          <span className="font-bold uppercase text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-sp-green break-words">
             Terms & Conditions
           </span>
-          <span className="text-xl transition-transform group-open:rotate-180">
-            <ChevronDown className="size-4 text-white/80" />
+          <span className="text-base sm:text-lg md:text-xl transition-transform group-open:rotate-180 flex-shrink-0">
+            <ChevronDown className="size-3 sm:size-3.5 md:size-4 text-white/80" />
           </span>
         </summary>
-        <div className="px-4 pb-4 text-sm text-white/80 space-y-4">
+        <div className="px-2 sm:px-3 md:px-4 pb-2 sm:pb-3 md:pb-4 text-[10px] sm:text-xs md:text-sm text-white/80 space-y-2 sm:space-y-3 md:space-y-4">
           <p className="space-y-2">
             These Promotional Terms & Conditions apply to this Sports Promotion.
             They should be read alongside our General Website Terms &
@@ -30,10 +30,10 @@ const TermsAndConditions = ({ className }) => {
           </p>
 
           <div>
-            <h5 className="font-bold text-sp-green uppercase mb-2">
+            <h5 className="font-bold text-sp-green uppercase mb-1 sm:mb-1.5 md:mb-2 text-xs sm:text-sm md:text-base">
               Promotional Period
             </h5>
-            <p>
+            <p className="break-words">
               This Sports Promotion is available to qualifying customers from
               18:00 20/05/2021 – 23:59 31/12/2024. If we decide to withdraw this
               Sports Promotion, this will not impact any Qualifying Bets you
@@ -42,10 +42,10 @@ const TermsAndConditions = ({ className }) => {
           </div>
 
           <div>
-            <h5 className="font-bold text-sp-green uppercase mb-2">
+            <h5 className="font-bold text-sp-green uppercase mb-1 sm:mb-1.5 md:mb-2 text-xs sm:text-sm md:text-base">
               Who Qualifies For This Sports Promotion
             </h5>
-            <ul className="list-disc list-inside space-y-1">
+            <ul className="list-disc list-inside space-y-0.5 sm:space-y-1 break-words">
               <li>
                 This Sports Promotion is open to UK & Republic of Ireland
                 residents aged 18 years or over opening a NEW Online or Mobile
@@ -73,10 +73,10 @@ const TermsAndConditions = ({ className }) => {
           </div>
 
           <div>
-            <h5 className="font-bold text-sp-green uppercase mb-2">
+            <h5 className="font-bold text-sp-green uppercase mb-1 sm:mb-1.5 md:mb-2 text-xs sm:text-sm md:text-base">
               How To Claim This Sports Promotion
             </h5>
-            <ul className="list-disc list-inside space-y-1">
+            <ul className="list-disc list-inside space-y-0.5 sm:space-y-1 break-words">
               <li>
                 To claim this Sports Promotion, you must register a NEW account,
                 making a deposit of £5 or more and place a Qualifying Bet/s
@@ -114,10 +114,10 @@ const TermsAndConditions = ({ className }) => {
           </div>
 
           <div>
-            <h5 className="font-bold text-sp-green uppercase mb-2">
+            <h5 className="font-bold text-sp-green uppercase mb-1 sm:mb-1.5 md:mb-2 text-xs sm:text-sm md:text-base">
               Restrictions On Your Free Bet
             </h5>
-            <ul className="list-disc list-inside space-y-1">
+            <ul className="list-disc list-inside space-y-0.5 sm:space-y-1 break-words">
               <li>
                 Your free bet must be used within 7 days of it being credited to
                 your account, otherwise it will expire.
@@ -153,10 +153,10 @@ const TermsAndConditions = ({ className }) => {
           </div>
 
           <div>
-            <h5 className="font-bold text-sp-green uppercase mb-2">
+            <h5 className="font-bold text-sp-green uppercase mb-1 sm:mb-1.5 md:mb-2 text-xs sm:text-sm md:text-base">
               Important Terms
             </h5>
-            <ul className="list-disc   list-inside space-y-1">
+            <ul className="list-disc list-inside space-y-0.5 sm:space-y-1 break-words">
               <li>
                 <span className="font-semibold">Promoter:</span> LC
                 International Limited having its registered office at Suite 6,
@@ -193,13 +193,13 @@ const TermsAndConditions = ({ className }) => {
             </ul>
           </div>
 
-          <p className="font-bold text-sp-green uppercase text-center pt-2">
+          <p className="font-bold text-sp-green uppercase text-center pt-1 sm:pt-1.5 md:pt-2 text-xs sm:text-sm md:text-base break-words">
             Please Bet Responsibly.
             <a
               href="https://begambleaware.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline cursor-pointer hover:no-underline text-sp-green ml-2"
+              className="underline cursor-pointer hover:no-underline text-sp-green ml-1 sm:ml-2 break-all"
             >
               begambleaware.org
             </a>
