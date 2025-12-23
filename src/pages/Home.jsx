@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { SharedButton } from "@/shared/Button";
+import Topbar from "@/theme/topbar/Topbar";
 import Header from "@/theme/header/Header";
 import Sidebar from "@/theme/sidebar/Sidebar";
 import heroImage from "@/assets/dashboard/CTA Button.png";
@@ -11,9 +13,29 @@ import { howItWorksSteps } from "@/utils/constant";
 import TermsAndConditions from "@/components/TermsAndConditions";
 
 const Home = ({ className }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
     <>
+      <Topbar onMenuClick={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+
+      {/* Mobile Sidebar */}
+      <Sidebar
+        isMobileOpen={isSidebarOpen}
+        onClose={closeSidebar}
+        className="lg:hidden"
+      />
+
       <div className="flex gap-0">
+        {/* Desktop Sidebar */}
         <div className="hidden lg:block shrink-0">
           <Sidebar className="min-h-[500px] sm:min-h-[550px] md:min-h-[600px]" />
         </div>
@@ -111,10 +133,10 @@ const Home = ({ className }) => {
                 {item.step}
               </div>
               <div className="min-w-0 flex-1">
-                <h4 className="text-xs sm:text-sm md:text-base font-bold text-white uppercase tracking-wide break-words">
+                <h4 className="text-xs sm:text-sm md:text-base font-bold text-white uppercase tracking-wide wrap-break">
                   {item.title}
                 </h4>
-                <p className="text-[10px] sm:text-xs md:text-sm text-white/80 mt-0.5 sm:mt-1 break-words">
+                <p className="text-[10px] sm:text-xs md:text-sm text-white/80 mt-0.5 sm:mt-1 wrap-break">
                   {item.description}
                 </p>
               </div>

@@ -8,7 +8,7 @@ const Header = ({ className }) => {
   return (
     <header className={`bg-sp-green ${className || ""}`}>
       <div className="flex h-9 sm:h-10 md:h-12 items-center justify-between px-1.5 sm:px-2 md:px-3 lg:px-6 overflow-x-auto gap-1 sm:gap-2">
-        <nav className="flex items-center gap-0 sm:gap-0.5 md:gap-1 min-w-0 flex-shrink">
+        <nav className="flex items-center gap-0 sm:gap-0.5 md:gap-1 min-w-0 shrink">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -24,7 +24,7 @@ const Header = ({ className }) => {
           ))}
         </nav>
 
-        <div className="flex items-center gap-0.5 sm:gap-1 md:gap-2 lg:gap-4 flex-shrink-0">
+        <div className="flex items-center gap-0.5 sm:gap-1 md:gap-2 lg:gap-4 shrink-0">
           <Link href="/checkout" className="hidden sm:block">
             <button className="text-[10px] sm:text-xs md:text-sm font-medium text-sp-black hover:text-sp-black/80 transition-colors whitespace-nowrap px-1 sm:px-2">
               Top up

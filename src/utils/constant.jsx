@@ -6,34 +6,81 @@ export const navLinks = [
 ];
 
 export const popularSports = [
-  { id: "football", name: "Football", icon: "⚽", href: "/sports/football" },
-  { id: "esports", name: "E - Sports", icon: "🎮", href: "/sports/esports" },
+  {
+    id: "football",
+    name: "Football",
+    icon: "CircleDot",
+    href: "/sports/football",
+  },
+  {
+    id: "esports",
+    name: "E - Sports",
+    icon: "Gamepad2",
+    href: "/sports/esports",
+  },
   {
     id: "basketball",
     name: "Basketball",
-    icon: "🏀",
+    icon: "CircleDot",
     href: "/sports/basketball",
   },
 ];
 
 export const allSports = [
-  { id: "football", name: "Football", icon: "⚽", href: "/sports/football" },
-  { id: "boxing", name: "Boxing", icon: "🥊", href: "/sports/boxing" },
+  {
+    id: "football",
+    name: "Football",
+    icon: "CircleDot",
+    href: "/sports/football",
+  },
+  { id: "boxing", name: "Boxing", icon: "Zap", href: "/sports/boxing" },
   {
     id: "basketball",
     name: "Basketball",
-    icon: "🏀",
+    icon: "CircleDot",
     href: "/sports/basketball",
   },
-  { id: "cricket", name: "Cricket", icon: "🏏", href: "/sports/cricket" },
-  { id: "horses", name: "Horses", icon: "🐎", href: "/racing/horses" },
-  { id: "esports", name: "E - Sports", icon: "🎮", href: "/sports/esports" },
-  { id: "ufc", name: "UFC", icon: "🥋", href: "/sports/ufc" },
+  {
+    id: "cricket",
+    name: "Cricket",
+    icon: "CircleDot",
+    href: "/sports/cricket",
+  },
+  { id: "horses", name: "Horses", icon: "Trophy", href: "/racing/horses" },
+  {
+    id: "esports",
+    name: "E - Sports",
+    icon: "Gamepad2",
+    href: "/sports/esports",
+  },
+  { id: "ufc", name: "UFC", icon: "Shield", href: "/sports/ufc" },
   {
     id: "american-football",
     name: "American Football",
-    icon: "🏈",
+    icon: "CircleDot",
     href: "/sports/american-football",
+  },
+  { id: "tennis", name: "Tennis", icon: "CircleDot", href: "/sports/tennis" },
+
+  { id: "darts", name: "Darts", icon: "Target", href: "/sports/darts" },
+  { id: "mma", name: "MMA", icon: "Shield", href: "/sports/mma" },
+  {
+    id: "wrestling",
+    name: "Wrestling",
+    icon: "Users",
+    href: "/sports/wrestling",
+  },
+  {
+    id: "waterpolo",
+    name: "Waterpolo",
+    icon: "Waves",
+    href: "/sports/waterpolo",
+  },
+  {
+    id: "handball",
+    name: "Handball",
+    icon: "CircleDot",
+    href: "/sports/handball",
   },
 ];
 
