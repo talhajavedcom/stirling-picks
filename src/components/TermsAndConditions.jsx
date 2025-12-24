@@ -1,16 +1,21 @@
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 
 const TermsAndConditions = ({ className }) => {
   return (
-    <section className={cn("bg-black mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 md:p-4 text-white rounded-md sm:rounded-lg", className)}>
+    <section
+      className={cn(
+        "bg-black mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 md:p-4 text-white rounded-md sm:rounded-lg",
+        className
+      )}
+    >
       <details className="group">
         <summary className="flex items-center justify-between p-2 sm:p-3 md:p-4 cursor-pointer text-white font-medium gap-2">
           <span className="font-bold uppercase text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-sp-green break-words">
             Terms & Conditions
           </span>
           <span className="text-base sm:text-lg md:text-xl transition-transform group-open:rotate-180 flex-shrink-0">
-            <ChevronDown className="size-3 sm:size-3.5 md:size-4 text-white/80" />
+            <Plus className="size-3 sm:size-3.5 md:size-4 text-white/80" />
           </span>
         </summary>
         <div className="px-2 sm:px-3 md:px-4 pb-2 sm:pb-3 md:pb-4 text-[10px] sm:text-xs md:text-sm text-white/80 space-y-2 sm:space-y-3 md:space-y-4">

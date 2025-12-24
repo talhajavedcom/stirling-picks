@@ -123,7 +123,7 @@ const Home = ({ className }) => {
       </div>
 
       <section className="bg-black text-white mt-2 sm:mt-3 md:mt-4 p-3 sm:p-4 md:p-6 lg:p-8 mx-1 sm:mx-2 md:mx-4 rounded-md sm:rounded-lg md:rounded-xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-items-center">
           {howItWorksSteps.map((item) => (
             <div
               key={item.step}
