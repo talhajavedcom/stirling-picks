@@ -8,7 +8,7 @@ import { SharedButton } from "@/shared/Button";
 const Topbar = ({ className, onMenuClick, isSidebarOpen }) => {
   return (
     <div
-      className={`w-full border-b-4 border-sp-btn-primary bg-white ${className || ""}`}
+      className={`w-full border-b-4 border-sp-btn-primary bg-white shrink-0 ${className || ""}`}
     >
       <div className="flex h-12 sm:h-14 bg-sp-green-dark items-center justify-between px-2 sm:px-3 md:px-4 lg:px-6 gap-2">
         <div className="flex items-center gap-2 sm:gap-3">

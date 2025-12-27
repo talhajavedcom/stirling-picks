@@ -6,7 +6,7 @@ import { navLinks } from "@/utils/constant";
 
 const Header = ({ className }) => {
   return (
-    <header className={`bg-sp-green ${className || ""}`}>
+    <header className={`bg-sp-green shrink-0 ${className || ""}`}>
       <div className="flex h-9 sm:h-10 md:h-12 items-center justify-between px-1.5 sm:px-2 md:px-3 lg:px-6 overflow-x-auto gap-1 sm:gap-2">
         <nav className="flex items-center gap-0 sm:gap-0.5 md:gap-1 min-w-0 shrink">
           {navLinks.map((link) => (

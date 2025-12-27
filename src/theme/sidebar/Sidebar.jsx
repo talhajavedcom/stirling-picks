@@ -51,20 +51,14 @@ const Sidebar = ({
     );
   }, [searchQuery]);
 
-  // Close sidebar when route changes on mobile
   useEffect(() => {
     if (isMobileOpen && onClose) {
-      const handleRouteChange = () => {
-        onClose();
-      };
-      // Close on navigation
       return () => {};
     }
   }, [pathname, isMobileOpen, onClose]);
 
   return (
     <>
-      {/* Overlay for mobile */}
       {isMobileOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity"
@@ -75,14 +69,10 @@ const Sidebar = ({
 
       <aside
         className={cn(
-          "flex flex-col bg-sp-green-dark overflow-hidden transition-all duration-300 pb-2 rounded-r-lg",
-          // Desktop sidebar: always visible on lg+, relative positioning
+          "flex flex-col bg-sp-green-dark overflow-hidden transition-all duration-300 pb-2 rounded-br-lg",
           !onClose && "hidden lg:flex lg:relative",
-          // Desktop height: 100dvh minus topbar (h-12 sm:h-14 = 3rem/3.5rem)
-          !onClose && "lg:h-[calc(100dvh-3.5rem)]",
-          // Mobile sidebar: fixed drawer that slides in
+          !onClose && !className?.includes("h-") && "lg:h-full",
           onClose && "lg:hidden fixed left-0 top-0 h-screen z-50",
-          // Mobile: slide in/out based on state
           onClose &&
             (isMobileOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"),
           isCollapsed ? "w-12 sm:w-14 md:w-16" : "w-48 sm:w-56 md:w-60",

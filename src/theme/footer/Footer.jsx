@@ -96,7 +96,9 @@ const Footer = ({ className }) => {
           <span className="flex items-center justify-center size-4 sm:size-5 border border-white/60 rounded-full text-[8px] sm:text-xs">
             ©
           </span>
-          <span className="text-center">{currentYear} Stirling Picks. All rights reserved.</span>
+          <span className="text-center">
+            {currentYear} Stirling Picks. All rights reserved.
+          </span>
         </div>
       </div>
     </footer>

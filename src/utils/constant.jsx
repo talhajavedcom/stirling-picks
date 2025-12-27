@@ -1,8 +1,8 @@
 export const navLinks = [
   { label: "Home", href: "/", active: false },
-  { label: "How it works", href: "/how-it-works", active: false },
-  { label: "Promotions", href: "/promotions", active: false },
-  { label: "Account", href: "/account", active: false },
+  { label: "How it works", href: "/user/how-it-works", active: false },
+  { label: "Promotions", href: "/user/promotions", active: false },
+  { label: "Account", href: "/user/account", active: false },
 ];
 
 export const popularSports = [
