@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+import { AuthProvider } from "@/context/AuthContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,7 +24,7 @@ const RootLayout = ({ children }) => {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} font-sans antialiased`}
       >
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

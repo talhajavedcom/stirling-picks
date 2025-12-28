@@ -6,19 +6,28 @@ import Image from "next/image";
 import { Eye, EyeOff, User as UserIcon, X } from "lucide-react";
 import { SharedButton } from "@/shared/Button";
 import InputField from "@/shared/InputField";
+import { useAuth } from "@/context/AuthContext";
 
 const LoginModal = ({ isOpen, onClose, onSwitchToSignup }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const { login } = useAuth();
 
   const formik = useFormik({
     initialValues: {
-      username: "",
-      password: "",
+      username: "admin@mail.com",
+      password: "admin123",
       saveUsername: false,
     },
     onSubmit: (values) => {
-      console.log("Login:", values);
-      onClose();
+      setError("");
+      const success = login({
+        username: values.username,
+        password: values.password,
+      });
+      if (!success) {
+        setError("Invalid credentials. Try admin@mail.com / admin123");
+      }
     },
   });
 
@@ -26,8 +35,13 @@ const LoginModal = ({ isOpen, onClose, onSwitchToSignup }) => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
       setTimeout(() => {
-        formik.resetForm();
+        formik.setValues({
+          username: "admin@mail.com",
+          password: "admin123",
+          saveUsername: false,
+        });
         setShowPassword(false);
+        setError("");
       }, 0);
     } else {
       document.body.style.overflow = "unset";
@@ -105,6 +119,12 @@ const LoginModal = ({ isOpen, onClose, onSwitchToSignup }) => {
               Join now!
             </button>
           </div>
+
+          {error && (
+            <div className="mb-3 sm:mb-4 p-2 sm:p-3 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-600 text-xs sm:text-sm">{error}</p>
+            </div>
+          )}
 
           <form
             onSubmit={formik.handleSubmit}

@@ -81,7 +81,7 @@ const Sidebar = ({
       >
         <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden no-scrollbar">
           <Link
-            href="/sports/live"
+            href="/user/sports/live"
             onClick={() => {
               if (isMobileOpen && onClose) {
                 onClose();
@@ -90,7 +90,7 @@ const Sidebar = ({
             className={cn(
               "flex items-center gap-1.5 sm:gap-2 md:gap-3 px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 mx-1.5 sm:mx-2 mt-1.5 sm:mt-2 rounded-md sm:rounded-lg transition-colors",
               "bg-white hover:bg-sp-gray-100",
-              isActive("/sports/live") && "ring-1 sm:ring-2 ring-sp-green-dark"
+              isActive("/user/sports/live") && "ring-1 sm:ring-2 ring-sp-green-dark"
             )}
           >
             <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2">
